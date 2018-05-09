@@ -1,7 +1,13 @@
 package me.ykon.js.vuemate.app;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+@Controller
 public class HomeController {
+
+    @GetMapping("/home")
+    public String home(){
+        return "home";
+    }
 }
